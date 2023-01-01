@@ -42,6 +42,22 @@
             "type": "coreclr",
             "request": "attach",
             "processId": "${command:pickProcess}"
+        },
+        {
+            "name": "TSNode",
+            "type": "node",
+            "request": "launch",
+            "args": [
+                "${workspaceRoot}/src/main.tsx"
+            ],
+            "runtimeArgs": [
+                "--loader",
+                "tsx"
+            ],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
         }
     ]
 }
